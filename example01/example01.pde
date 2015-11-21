@@ -48,6 +48,7 @@ void draw() {
   
   m.applyForce(gravity);
   m.update();
+  m.checkEdges();
   
   x0 = m.location.x;
   y0 = m.location.y;
@@ -56,20 +57,20 @@ void draw() {
   
   line(x0, y0, x1, y1);
   
-  add_point(2, x0, y0);
-  add_point(2, x1, y1);
+  add_point(1, x1, y0);
+  add_point(3, x0, y1);
   
   send_points();
   
   //
   
-  m.checkEdges();
+  
 }
 
 void add_point(int bright, float xf, float yf)
 {
-  int x = (int)(xf * 2048 / xmax);
-  int y = (int)(yf * 2048 / ymax);
+  int x = (int)(xf * 2047 / xmax);
+  int y = (int)(yf * 2047 / ymax);
   int cmd = (bright & 3) << 22 | (x & 2047) << 11 | (y & 2047) << 0;
   bytes[byte_count++] = (byte)((cmd >> 16) & 0xFF);
   bytes[byte_count++] = (byte)((cmd >>  8) & 0xFF);
