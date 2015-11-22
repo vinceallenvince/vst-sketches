@@ -17,9 +17,9 @@ int byte_count = 0;
 // first 2 brightness, next 11 X-coord, last 11 Y-coord;
 // 3 x 8 bit bytes
 
-Mover m;
 PVector center;
-PVector gravity;
+float r;
+float theta;
 
 void setup() {
   // finding the right port requires picking it from the list
@@ -37,30 +37,35 @@ void setup() {
   strokeWeight(1);
   
   //
-  
+ 
   center = new PVector(xmax / 2, ymax / 2);
-  gravity = new PVector(0,0.1);
-  m = new Mover(center); 
+  r = height * 0.45;
+  theta = 0;
 }
 
 void draw() {
   background(255);
   
-  m.applyForce(gravity);
-  m.update();
-  m.checkEdges();
+  // Translate the origin point to the center of the screen
+  //translate(center.x, center.y);
   
-  x0 = m.location.x;
-  y0 = m.location.y;
-  x1 = m.middle.x;
-  y1 = m.middle.y;
+  // Convert polar to cartesian
+  float x0 = (r * cos(theta)) + center.x;
+  float y0 = (r * sin(theta)) + center.y;
+  
+  x1 = center.x;
+  y1 = center.y;
   
   line(x0, y0, x1, y1);
   
+  theta += 0.02;
+  
   add_point(1, x1, x1);
-  add_point(3, height - y0, width - x0);
+  add_point(2, height - y0, width - x0);
   
   send_points();
+  
+  
 }
 
 void add_point(int bright, float xf, float yf)
