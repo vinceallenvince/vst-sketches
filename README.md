@@ -10,5 +10,4 @@ To learn more about creating rendering vectors and driving these monitors at [v.
 
 ![Vector displays](http://vinceallenvince.github.io/vst-sketches/images/IMG_7839.jpg)
 
-<iframe src="https://player.vimeo.com/video/146536003" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
