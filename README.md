@@ -6,5 +6,9 @@ These Processing sketches are designed to run on a Vectrex monitor.
 
 To learn more about creating rendering vectors and driving these monitors at [v.st](http://v.st).
 
+![Vectrex display](http://vinceallenvince.github.io/vst-sketches/images/IMG_7841.jpg)
+
+![Vector displays](http://vinceallenvince.github.io/vst-sketches/images/IMG_7839.jpg)
+
 <iframe src="https://player.vimeo.com/video/146536003" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
