@@ -4,7 +4,7 @@ NYC Resistor hosted [a class](https://www.eventbrite.com/e/vector-display-class-
 
 These Processing sketches are designed to run on a Vectrex monitor.
 
-To learn more about creating rendering vectors and driving these monitors at [v.st](http://v.st).
+To learn more about rendering vectors and driving these monitors at [v.st](http://v.st).
 
 ![Vectrex display](http://vinceallenvince.github.io/vst-sketches/images/IMG_7841.jpg)
 
